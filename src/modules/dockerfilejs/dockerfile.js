@@ -1,6 +1,5 @@
 const instruction = require('./bin/instruction.js')
 const model = require('./bin/model.js')
-import _ from 'lodash'
 
 function InstructionWrap(name, data, on_build_flag, fn) {
   this.name = name
