@@ -1,0 +1,35 @@
+{
+  "name": "dockerfile-js",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "./lib/index.js",
+  "scripts": {
+    "gulp": "./node_modules/gulp/bin/gulp.js",
+    "start": "node ./lib/index.js"
+  },
+  "babel": {
+    "presets": [
+      "live"
+    ]
+  },
+  "engines": {
+    "node": "^6.0.0"
+  },
+  "dependencies": {
+    "ansi-escapes": "^1.4.0",
+    "babel-register": "*",
+    "babel-runtime": "^5.0.0",
+    "clear-cli": "^1.0.1",
+    "dargs": "^5.1.0",
+    "dockerfilejs": "^1.0.4",
+    "dockerfilelint": "^1.1.2",
+    "lodash": "^4.16.4",
+    "source-map-support": "^0.4.3"
+  },
+  "devDependencies": {
+    "babel-preset-live": "*",
+    "babelator": "*",
+    "gulp": "gulpjs/gulp.git#4.0"
+  }
+}
