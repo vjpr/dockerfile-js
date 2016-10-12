@@ -17,19 +17,12 @@
     "node": "^6.0.0"
   },
   "dependencies": {
-    "ansi-escapes": "^1.4.0",
-    "babel-register": "*",
-    "babel-runtime": "^5.0.0",
-    "clear-cli": "^1.0.1",
-    "dargs": "^5.1.0",
-    "dockerfilejs": "^1.0.4",
-    "dockerfilelint": "^1.1.2",
-    "lodash": "^4.16.4",
-    "source-map-support": "^0.4.3"
+    "babel-register": "^6.16.3",
+    "babel-runtime": "^5.0.0"
   },
   "devDependencies": {
-    "babel-preset-live": "*",
-    "babelator": "*",
+    "babel-preset-live": "^0.1.0",
+    "babelator": "^0.2.21",
     "gulp": "gulpjs/gulp.git#4.0"
   }
 }
