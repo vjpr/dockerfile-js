@@ -6,7 +6,8 @@
   "main": "./lib/index.js",
   "scripts": {
     "gulp": "./node_modules/gulp/bin/gulp.js",
-    "start": "node ./lib/index.js"
+    "start": "node ./lib/index.js",
+    "lint": "echo TODO"
   },
   "babel": {
     "presets": [
@@ -24,5 +25,12 @@
     "babel-preset-live": "^0.1.0",
     "babelator": "^0.2.21",
     "gulp": "gulpjs/gulp.git#4.0"
+  },
+  "shipmate": {
+    "depcheck": {
+      "ignoreMissing": [
+        "modules"
+      ]
+    }
   }
 }
