@@ -209,8 +209,11 @@ function entryPoint(entrypoint) {
   const executable = entrypoint.executable
   entrypoint = boxAndFilter(entrypoint.params)
 
-  if(entrypoint.length) {
-    instruction = `ENTRYPOINT ["${executable}", ${entrypoint.map(mapToQuote).join(', ')}]`
+  // TODO(vjpr)
+  //if(entrypoint.length) {
+  if(true) {
+    instruction = `ENTRYPOINT ["${executable}"]`
+    //instruction = `ENTRYPOINT ["${executable}", ${!entrypoint ? '' : entrypoint.map(mapToQuote).join(', ')}]`
   } else {
     throw new errors.InstructionError('entrypoint', 'expected string or array of arguments.')
   }
@@ -307,7 +310,7 @@ function expose(expose, onbuild) {
     })
 
   if(expose.length) {
-    instruction = `EXPOSE [ ${expose.join(', ')} ]`
+    instruction = `EXPOSE ${expose.join(', ')}`
   } else {
     throw new errors.InstructionError(
       'expose',
@@ -352,7 +355,7 @@ function arg(env, onbuild) {
   env = flattenLabels(env)
 
   if(env.length) {
-    instruction = `ARG ${env.map(e => `${e[0]}=${mapToQuote(e[1])}`).join(' \\\n    ')}`
+    instruction = `${env.map(e => `ARG ${e[0]}=${mapToQuote(e[1])}`).join('\n')}`
   } else {
     throw new errors.InstructionError('arg', 'expected string or array of arguments.')
   }
